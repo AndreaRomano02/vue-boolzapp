@@ -131,6 +131,15 @@ img.user-img {
   background-color: var(--bg-search-bar);
 }
 
+.search-bar .form-control {
+  border-left: none;
+}
+
+.search-bar .input-group-text {
+  background-color: white;
+  border-right: none;
+}
+
 /** Contacts */
 .contacts {
   overflow: auto;
