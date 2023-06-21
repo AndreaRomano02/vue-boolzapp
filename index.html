@@ -25,7 +25,7 @@
     <title>Name</title>
   </head>
 
-  <body>
+  <body id="root">
     <div id="wrap">
       <!-- MAIN LAYOUT -->
       <div id="main-layout">
@@ -34,8 +34,8 @@
           <!-- USER -->
           <header class="aside-header">
             <div class="user d-flex align-items-center">
-              <img class="user-img" src="img/avatar_1.jpg" alt="user-image" />
-              <h5 class="user-name m-0">Andrea</h5>
+              <img class="user-img" :src="`img/avatar${user.avatar}.jpg`" alt="user-image" />
+              <h5 class="user-name m-0">{{user.name}}</h5>
             </div>
             <div class="user-icon">
               <a href="#"><i class="fa-solid fa-circle-notch"></i></a>
@@ -63,21 +63,9 @@
 
           <!-- CONTACTS -->
           <div class="contacts">
-            <div class="preview-chat">
-              <img class="me-3" src="img/avatar_2.jpg" alt="user-image" />
-              <h4>Michele</h4>
-            </div>
-            <div class="preview-chat">
-              <img class="me-3" src="img/avatar_3.jpg" alt="user-image" />
-              <h4>Fabio</h4>
-            </div>
-            <div class="preview-chat">
-              <img class="me-3" src="img/avatar_4.jpg" alt="user-image" />
-              <h4>Samuele</h4>
-            </div>
-            <div class="preview-chat">
-              <img class="me-3" src="img/avatar_5.jpg" alt="user-image" />
-              <h4>Luisa</h4>
+            <div v-for="contact in contacts" class="preview-chat">
+              <img class="me-3" :src="`img/avatar${contact.avatar}`" :alt="contact.name" />
+              <h4>{{contact.name}}</h4>
             </div>
           </div>
         </aside>
