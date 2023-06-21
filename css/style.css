@@ -169,6 +169,22 @@ main {
 .input-area {
   height: 90px;
   flex-shrink: 0;
+  background-color: var(--bg-header);
 
-  border: 1px dashed black;
+  display: flex;
+  align-items: center;
+}
+
+.input-area a {
+  font-size: 2rem;
+  color: #6b7376;
+  flex: 0 0 10%;
+  text-align: center;
+}
+
+.input-message {
+  flex-grow: 1;
+
+  height: 60px;
+  border: none;
 }
