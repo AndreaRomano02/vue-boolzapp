@@ -1,6 +1,9 @@
 :root {
   --bg-top: rgba(0, 150, 136, 1);
   --bg-bottom: rgba(220, 219, 210, 1);
+  --bg-search-bar: #fafafa;
+  --bg-notification: #8edafc;
+  --bg-header: #eaeaea;
 }
 
 /*# General */
@@ -19,8 +22,74 @@ body {
   height: 100%;
 }
 
-main {
+#main-layout {
   height: 95vh;
   width: 80vw;
   background-color: white;
+
+  display: flex;
+}
+
+/** General Header */
+header {
+  height: 90px;
+  flex-shrink: 0;
+  background-color: var(--bg-header);
+
+  border: 1px dashed black;
+}
+
+/*# Contatti */
+aside {
+  flex: 0 0 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  border: 1px dashed green;
+}
+
+/** Notification */
+.notification {
+  flex-basis: 100px;
+  background-color: var(--bg-notification);
+  flex-shrink: 0;
+}
+
+/** Search Bar */
+.search-bar {
+  flex-basis: 60px;
+  flex-shrink: 0;
+
+  background-color: var(--bg-search-bar);
+}
+
+/** Contacts */
+.contacts {
+  overflow: auto;
+  flex-grow: 1;
+  background-color: dodgerblue;
+}
+
+/*# Main */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  border: 1px dashed black;
+}
+
+/** Chat Content */
+.chat-content {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+/** Text Area Message */
+.input-area {
+  height: 90px;
+  flex-shrink: 0;
+
+  border: 1px dashed black;
 }
