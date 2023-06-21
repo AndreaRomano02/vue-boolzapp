@@ -1,0 +1,10 @@
+:root {
+  --bg-top: rgba(0, 150, 136, 1);
+  --bg-bottom: rgba(220, 219, 210, 1);
+}
+
+body {
+  height: 100vh;
+  background: rgb(0, 150, 136);
+  background: linear-gradient(var(--bg-top) 15%, var(--bg-bottom) 15%);
+}
