@@ -4,6 +4,7 @@
   --bg-search-bar: #fafafa;
   --bg-notification: #8edafc;
   --bg-header: #eaeaea;
+  --send-chat-color: #d5f9ba;
 }
 
 /*# General */
@@ -163,6 +164,27 @@ main {
   flex-grow: 1;
   overflow: auto;
   background-image: url('../img/mine.jpg');
+}
+
+.chat-content .message {
+  min-width: 50px;
+  height: 60px;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 1rem;
+}
+
+.message.received {
+  background-color: white;
+}
+
+.chat-content .sent {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.message.send {
+  background-color: var(--send-chat-color);
 }
 
 /** Text Area Message */
