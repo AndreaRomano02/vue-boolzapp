@@ -7,6 +7,13 @@
 }
 
 /*# General */
+a {
+  color: currentColor;
+}
+
+a:hover {
+  color: currentColor;
+}
 
 /** Body */
 body {
@@ -30,23 +37,61 @@ body {
   display: flex;
 }
 
+/** General img */
+img {
+  height: 80px;
+  max-width: 100%;
+  border-radius: 50%;
+  display: block;
+}
+
 /** General Header */
 header {
   height: 90px;
-  flex-shrink: 0;
+  padding: 1rem;
+
   background-color: var(--bg-header);
+
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
 
   border: 1px dashed black;
 }
 
+header .user {
+  flex-basis: 75%;
+}
+
+header .user-icon {
+  color: #c5bbb6;
+  padding-right: 10px;
+
+  flex: 1 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.user-icon a {
+  font-size: 30px;
+}
+
 /*# Contatti */
 aside {
-  flex: 0 0 35%;
+  flex: 0 0 535px;
   height: 100%;
   display: flex;
   flex-direction: column;
 
   border: 1px dashed green;
+}
+
+/** Header Contacts */
+
+/*? User Image */
+img.user-img {
+  height: 60px;
 }
 
 /** Notification */
@@ -84,6 +129,7 @@ main {
 .chat-content {
   flex-grow: 1;
   overflow: auto;
+  background-image: url('../img/mine.jpg');
 }
 
 /** Text Area Message */
