@@ -3,8 +3,24 @@
   --bg-bottom: rgba(220, 219, 210, 1);
 }
 
+/*# General */
+
+/** Body */
 body {
   height: 100vh;
   background: rgb(0, 150, 136);
   background: linear-gradient(var(--bg-top) 15%, var(--bg-bottom) 15%);
+}
+
+#wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+main {
+  height: 95vh;
+  width: 80vw;
+  background-color: white;
 }
