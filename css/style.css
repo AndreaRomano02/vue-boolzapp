@@ -9,6 +9,7 @@
 /*# General */
 a {
   color: currentColor;
+  text-decoration: none;
 }
 
 a:hover {
@@ -99,8 +100,29 @@ img.user-img {
   flex-basis: 100px;
   background-color: var(--bg-notification);
   flex-shrink: 0;
+
+  padding-left: 40px;
 }
 
+#bell-notification {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#bell-notification i {
+  color: var(--bg-notification);
+}
+
+.text-notification a {
+  text-decoration: underline;
+  color: rgb(50, 50, 50);
+}
 /** Search Bar */
 .search-bar {
   flex-basis: 60px;
