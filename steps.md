@@ -18,3 +18,18 @@
 - Metto in ascolto tutti i contatti.
   - recupero l'id del contatto che ho appena cliccato e mi salvo l'oggetto.
   - E stampo l'immagine e i messaggi di quel contatto.
+
+# MILESTONE 3
+
+- Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando
+  “enter” il testo viene aggiunto al thread sopra, come messaggio verde.
+
+- Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà
+  un “ok” come risposta, che apparirà dopo 1 secondo.
+
+## STEPS
+
+- Collego l'input text ad un data e mi salvo il messaggio che viene scritto.
+- Una volta che l'utente preme enter aggiungo il messaggio con status inviato nel data principale.
+- Controllo la lunghezza dei messaggi all'inizio e me la salvo.
+- **Se** la lunghezza dei messaggi è maggiore rispetto a quella originale allora attendi qualche secondo e aggiungo un messaggio ricevuto nel data.
