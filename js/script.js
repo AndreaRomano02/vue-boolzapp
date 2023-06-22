@@ -7,6 +7,7 @@ const myApp = createApp({
   name: 'Boolzap',
   data() {
     return {
+      currentId: 1,
       user: {
         name: 'Andrea',
         avatar: '_io',
@@ -205,9 +206,13 @@ const myApp = createApp({
       ],
     };
   },
+  computed: {},
   methods: {
     renderPicture({ avatar }) {
       return `img/avatar${avatar}.jpg`;
+    },
+    setCurrentId({ id }) {
+      this.currentId = id;
     },
   },
 });
