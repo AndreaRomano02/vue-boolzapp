@@ -206,7 +206,11 @@ const myApp = createApp({
       ],
     };
   },
-  computed: {},
+  computed: {
+    currentContact() {
+      return this.contacts.find(({ id }) => id === this.currentId);
+    },
+  },
   methods: {
     renderPicture({ avatar }) {
       return `img/avatar${avatar}.jpg`;
