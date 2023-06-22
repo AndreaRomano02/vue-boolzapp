@@ -73,7 +73,11 @@
           <ul class="contacts list-unstyled m-0">
             <li v-for="contact in filterContacts" class="preview-chat" @click="setCurrentId(contact)">
               <img class="me-3" :src="renderPicture(contact)" :alt="contact.name" />
-              <h5>{{contact.name}}</h5>
+              <div class="description flex-grow-1">
+                <h5>{{contact.name}}</h5>
+                <p>{{contact.messages[contact.messages.length - 1].message}}</p>
+              </div>
+              <div class="date flex-shrink-0">{{contact.messages[contact.messages.length - 1].date}}</div>
             </li>
           </ul>
         </aside>

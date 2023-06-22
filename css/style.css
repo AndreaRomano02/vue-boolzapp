@@ -157,6 +157,14 @@ img.user-img {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.contacts .description p {
+  color: rgb(150, 150, 150);
+}
+
+.contacts .date {
+  font-size: 0.8rem;
+}
+
 /*# Main */
 main {
   flex-grow: 1;
@@ -178,6 +186,10 @@ main {
   padding: 1rem;
   padding-right: 40px;
   position: relative;
+}
+
+.chat-content .message:hover .banner a {
+  display: block;
 }
 
 .chat-content li {
@@ -215,6 +227,7 @@ main {
   position: absolute;
   right: 10px;
   top: 15px;
+  display: none;
 }
 
 .banner .actions {

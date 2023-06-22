@@ -238,11 +238,6 @@ const myApp = createApp({
       return this.currentContact.messages;
     },
 
-    //* Recupero la posizione dell'ultimo messaggio
-    lastCurrentMessage() {
-      return parseInt(this.currentMessages.length);
-    },
-
     //* Filtered Contacts
     filterContacts() {
       return this.contacts.filter(({ name }) => name.toLowerCase().includes(this.filterText));
@@ -287,6 +282,7 @@ const myApp = createApp({
       });
     },
 
+    //* Delete a message
     deleteMessage() {
       this.currentContact.messages = this.currentMessages.filter((message) => {
         console.log(this.currentMessageId, message.id);
