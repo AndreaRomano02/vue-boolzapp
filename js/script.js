@@ -210,6 +210,15 @@ const myApp = createApp({
     currentContact() {
       return this.contacts.find(({ id }) => id === this.currentId);
     },
+    renderContactPicture() {
+      return `img/avatar${this.currentContact.avatar}.jpg`;
+    },
+    renderContactName() {
+      return this.currentContact.name;
+    },
+    currentMessages() {
+      return this.currentContact.messages;
+    },
   },
   methods: {
     renderPicture({ avatar }) {

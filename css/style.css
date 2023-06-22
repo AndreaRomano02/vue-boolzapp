@@ -150,6 +150,7 @@ img.user-img {
 .contacts .preview-chat {
   display: flex;
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 /*# Main */

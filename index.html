@@ -65,9 +65,9 @@
 
           <!-- CONTACTS -->
           <ul class="contacts list-unstyled m-0">
-            <li v-for="contact in contacts" class="preview-chat">
+            <li v-for="contact in contacts" class="preview-chat" @click="setCurrentId(contact)">
               <img class="me-3" :src="renderPicture(contact)" :alt="contact.name" />
-              <h4>{{contact.name}}</h4>
+              <h5>{{contact.name}}</h5>
             </li>
           </ul>
         </aside>
@@ -79,9 +79,9 @@
           <!-- Header -->
           <header class="chat-header">
             <div class="user d-flex align-items-center">
-              <img class="user-img" src="img/avatar_io.jpg" alt="user-image" />
+              <img class="user-img" :src="renderContactPicture" :alt="renderContactName" />
               <div class="user-info">
-                <h5 class="user-name m-0">Andrea</h5>
+                <h5 class="user-name m-0">{{renderContactName}}</h5>
                 <div class="last-access">Ultimo accesso oggi alle</div>
               </div>
             </div>
@@ -92,21 +92,13 @@
             </div>
           </header>
 
-          <!-- Content -->
+          <!-- Messages -->
           <section class="chat-content p-4">
             <ul class="list-unstyled m-0">
-              <!-- Received -->
-              <li class="received">
+              <li v-for="message in currentMessages" :class="message.status">
                 <span class="message">
-                  <p class="text-message">Ciao</p>
-                  <div class="time">10/10/2020 12:40</div>
-                </span>
-              </li>
-              <!-- Send -->
-              <li class="sent">
-                <span class="message">
-                  <p class="text-message">Ciao me</p>
-                  <div class="time">10/10/2020 12:40</div>
+                  <p class="text-message">{{message.message}}</p>
+                  <div class="time">{{message.date}}</div>
                 </span>
               </li>
             </ul>
