@@ -7,7 +7,13 @@ const myApp = createApp({
   name: 'Boolzap',
   data() {
     return {
+      //* Current ID
       currentId: 1,
+
+      //* Message Text
+      textMessage: '',
+
+      //! DATA
       user: {
         name: 'Andrea',
         avatar: '_io',
@@ -207,25 +213,62 @@ const myApp = createApp({
     };
   },
   computed: {
+    //* Save a current Contact
     currentContact() {
       return this.contacts.find(({ id }) => id === this.currentId);
     },
+
+    //* Render a picture of current object
     renderContactPicture() {
       return `img/avatar${this.currentContact.avatar}.jpg`;
     },
+
+    //* Render a name of current object
     renderContactName() {
       return this.currentContact.name;
     },
+
+    //* Render a messages of current object
     currentMessages() {
       return this.currentContact.messages;
     },
+
+    //* Recupero la posizione dell'ultimo messaggio
+    lastCurrentMessage() {
+      return parseInt(this.currentMessages.length);
+    },
   },
   methods: {
+    //* Render al picture of contacts
     renderPicture({ avatar }) {
       return `img/avatar${avatar}.jpg`;
     },
+
+    //* Set the current ID
     setCurrentId({ id }) {
       this.currentId = id;
+    },
+
+    //* Send a new message
+    sendMessage() {
+      this.currentMessages.push({
+        status: 'sent',
+        message: this.textMessage,
+        date: '10/10/2020 13:20:50',
+      });
+      this.textMessage = '';
+
+      //* Answer in automatic after 2 seconds
+      setTimeout(this.automaticAnswer, 2000);
+    },
+
+    //* Automatic answer
+    automaticAnswer() {
+      this.currentMessages.push({
+        status: 'received',
+        message: 'Ok',
+        date: '10/10/2020 13:20:50',
+      });
     },
   },
 });

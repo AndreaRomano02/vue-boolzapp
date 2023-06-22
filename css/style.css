@@ -149,8 +149,12 @@ img.user-img {
 
 .contacts .preview-chat {
   display: flex;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   cursor: pointer;
+}
+
+.contacts .preview-chat:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /*# Main */

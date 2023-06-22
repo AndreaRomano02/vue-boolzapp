@@ -95,10 +95,10 @@
           <!-- Messages -->
           <section class="chat-content p-4">
             <ul class="list-unstyled m-0">
-              <li v-for="message in currentMessages" :class="message.status">
+              <li v-for="{message, date,status} in currentMessages" :class="status">
                 <span class="message">
-                  <p class="text-message">{{message.message}}</p>
-                  <div class="time">{{message.date}}</div>
+                  <p class="text-message">{{message}}</p>
+                  <div class="time">{{date}}</div>
                 </span>
               </li>
             </ul>
@@ -106,8 +106,19 @@
 
           <!-- Text Area Message -->
           <section class="input-area">
+            <!--# EMOJY -->
             <a href="#" class="emojy"><i class="fa-regular fa-face-smile"></i></a>
-            <input type="text" class="input-message" placeholder="Scrivi un messaggio" />
+
+            <!--# TEXT -->
+            <input
+              type="text"
+              class="input-message"
+              placeholder="Scrivi un messaggio"
+              v-model.trim="textMessage"
+              @keyup.enter="sendMessage()"
+            />
+
+            <!--# VOCAL AUDIO -->
             <a href="#" class="vocal"><i class="fa-solid fa-microphone"></i></a>
           </section>
         </main>
