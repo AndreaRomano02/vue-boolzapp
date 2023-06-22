@@ -6,6 +6,8 @@
 - Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare
   nome e immagine di ogni contatto
 
+---
+
 # MILESTONE 2
 
 - Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i
@@ -18,6 +20,8 @@
 - Metto in ascolto tutti i contatti.
   - recupero l'id del contatto che ho appena cliccato e mi salvo l'oggetto.
   - E stampo l'immagine e i messaggi di quel contatto.
+
+---
 
 # MILESTONE 3
 
@@ -33,3 +37,16 @@
 - Una volta che l'utente preme enter aggiungo il messaggio con status inviato nel data principale.
 - Controllo la lunghezza dei messaggi all'inizio e me la salvo.
 - **Se** la lunghezza dei messaggi è maggiore rispetto a quella originale allora attendi qualche secondo e aggiungo un messaggio ricevuto nel data.
+
+---
+
+# MILESTONE 4
+
+Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i
+contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo
+“mar” rimangono solo Marco e Martina).
+
+## STEPS
+
+- Collego l'input text ad un data.
+- Controllo se la lista di contatti include delle lettere del data salvato.

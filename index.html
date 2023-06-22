@@ -59,13 +59,19 @@
               <label class="input-group-text" for="filter-input">
                 <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
               </label>
-              <input type="text" class="form-control" id="filter-input" placeholder="Cerca o inizia una nuova chat" />
+              <input
+                type="text"
+                class="form-control"
+                id="filter-input"
+                placeholder="Cerca o inizia una nuova chat"
+                v-model="filterText"
+              />
             </div>
           </div>
 
           <!-- CONTACTS -->
           <ul class="contacts list-unstyled m-0">
-            <li v-for="contact in contacts" class="preview-chat" @click="setCurrentId(contact)">
+            <li v-for="contact in filterContacts" class="preview-chat" @click="setCurrentId(contact)">
               <img class="me-3" :src="renderPicture(contact)" :alt="contact.name" />
               <h5>{{contact.name}}</h5>
             </li>

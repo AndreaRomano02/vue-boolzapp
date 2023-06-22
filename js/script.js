@@ -7,6 +7,9 @@ const myApp = createApp({
   name: 'Boolzap',
   data() {
     return {
+      //* Text Filter
+      filterText: '',
+
       //* Current ID
       currentId: 1,
 
@@ -236,6 +239,11 @@ const myApp = createApp({
     //* Recupero la posizione dell'ultimo messaggio
     lastCurrentMessage() {
       return parseInt(this.currentMessages.length);
+    },
+
+    //* Filtered Contacts
+    filterContacts() {
+      return this.contacts.filter(({ name }) => name.toLowerCase().includes(this.filterText));
     },
   },
   methods: {
