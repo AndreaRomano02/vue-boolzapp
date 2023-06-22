@@ -56,18 +56,20 @@
           <!-- SEARCH BAR -->
           <div class="search-bar p-3">
             <div class="input-group">
-              <label class="input-group-text" for="filter-input"><i class="fa-solid fa-magnifying-glass"></i></label>
+              <label class="input-group-text" for="filter-input">
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+              </label>
               <input type="text" class="form-control" id="filter-input" placeholder="Cerca o inizia una nuova chat" />
             </div>
           </div>
 
           <!-- CONTACTS -->
-          <div class="contacts">
-            <div v-for="contact in contacts" class="preview-chat">
-              <img class="me-3" :src="`img/avatar${contact.avatar}`" :alt="contact.name" />
+          <ul class="contacts">
+            <li v-for="contact in contacts" class="preview-chat">
+              <img class="me-3" :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" />
               <h4>{{contact.name}}</h4>
-            </div>
-          </div>
+            </li>
+          </ul>
         </aside>
 
         <!-- MAIN -->
@@ -77,7 +79,7 @@
           <!-- Header -->
           <header class="chat-header">
             <div class="user d-flex align-items-center">
-              <img class="user-img" src="img/avatar_1.jpg" alt="user-image" />
+              <img class="user-img" src="img/avatar_io.jpg" alt="user-image" />
               <div class="user-info">
                 <h5 class="user-name m-0">Andrea</h5>
                 <div class="last-access">Ultimo accesso oggi alle</div>
@@ -91,21 +93,25 @@
           </header>
 
           <!-- Content -->
-          <div class="chat-content p-4">
-            <div class="received">
-              <div class="message received">Ciao</div>
-            </div>
-            <div class="sent">
-              <div class="message send">Ciao me</div>
-            </div>
-          </div>
+          <section class="chat-content p-4">
+            <ul class="list-unstyled m-0">
+              <!-- Received -->
+              <li class="received">
+                <span class="message">Ciao</span>
+              </li>
+              <!-- Send -->
+              <li class="sent">
+                <span class="message">Ciao me</span>
+              </li>
+            </ul>
+          </section>
 
           <!-- Text Area Message -->
-          <div class="input-area">
+          <section class="input-area">
             <a href="#" class="emojy"><i class="fa-regular fa-face-smile"></i></a>
             <input type="text" class="input-message" placeholder="Scrivi un messaggio" />
             <a href="#" class="vocal"><i class="fa-solid fa-microphone"></i></a>
-          </div>
+          </section>
         </main>
       </div>
     </div>

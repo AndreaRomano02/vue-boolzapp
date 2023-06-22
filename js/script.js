@@ -15,7 +15,7 @@ const myApp = createApp({
         {
           id: 1,
           name: 'Michele',
-          avatar: '_1.jpg',
+          avatar: '_1',
           visible: true,
           messages: [
             {
@@ -41,7 +41,7 @@ const myApp = createApp({
         {
           id: 2,
           name: 'Fabio',
-          avatar: '_2.jpg',
+          avatar: '_2',
           visible: true,
           messages: [
             {
@@ -67,7 +67,7 @@ const myApp = createApp({
         {
           id: 3,
           name: 'Samuele',
-          avatar: '_3.jpg',
+          avatar: '_3',
           visible: true,
           messages: [
             {
@@ -93,7 +93,7 @@ const myApp = createApp({
         {
           id: 4,
           name: 'Alessandro B.',
-          avatar: '_4.jpg',
+          avatar: '_4',
           visible: true,
           messages: [
             {
@@ -113,7 +113,7 @@ const myApp = createApp({
         {
           id: 5,
           name: 'Alessandro L.',
-          avatar: '_5.jpg',
+          avatar: '_5',
           visible: true,
           messages: [
             {
@@ -133,7 +133,7 @@ const myApp = createApp({
         {
           id: 6,
           name: 'Claudia',
-          avatar: '_5.jpg',
+          avatar: '_5',
           visible: true,
           messages: [
             {
@@ -159,7 +159,7 @@ const myApp = createApp({
         {
           id: 7,
           name: 'Federico',
-          avatar: '_7.jpg',
+          avatar: '_7',
           visible: true,
           messages: [
             {
@@ -179,7 +179,7 @@ const myApp = createApp({
         {
           id: 8,
           name: 'Davide',
-          avatar: '_8.jpg',
+          avatar: '_8',
           visible: true,
           messages: [
             {

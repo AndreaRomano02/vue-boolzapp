@@ -174,16 +174,22 @@ main {
   padding: 1rem;
 }
 
-.message.received {
+.chat-content li {
+  margin-bottom: 1rem;
+}
+
+/*? Received message */
+.received > .message {
   background-color: white;
 }
 
+/*? Send message */
 .chat-content .sent {
   display: flex;
   justify-content: flex-end;
 }
 
-.message.send {
+.sent > .message {
   background-color: var(--send-chat-color);
 }
 
