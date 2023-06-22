@@ -34,7 +34,7 @@
           <!-- USER -->
           <header class="aside-header">
             <div class="user d-flex align-items-center">
-              <img class="user-img" :src="`img/avatar${user.avatar}.jpg`" alt="user-image" />
+              <img class="user-img" :src="renderPicture(user)" :alt="user.name" />
               <h5 class="user-name m-0">{{user.name}}</h5>
             </div>
             <div class="user-icon">
@@ -66,7 +66,7 @@
           <!-- CONTACTS -->
           <ul class="contacts list-unstyled m-0">
             <li v-for="contact in contacts" class="preview-chat">
-              <img class="me-3" :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" />
+              <img class="me-3" :src="renderPicture(contact)" :alt="contact.name" />
               <h4>{{contact.name}}</h4>
             </li>
           </ul>

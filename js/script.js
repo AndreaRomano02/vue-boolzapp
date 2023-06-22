@@ -205,6 +205,11 @@ const myApp = createApp({
       ],
     };
   },
+  methods: {
+    renderPicture({ avatar }) {
+      return `img/avatar${avatar}.jpg`;
+    },
+  },
 });
 
 //# La monto  in pagina
