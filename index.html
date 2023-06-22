@@ -64,7 +64,7 @@
           </div>
 
           <!-- CONTACTS -->
-          <ul class="contacts">
+          <ul class="contacts list-unstyled m-0">
             <li v-for="contact in contacts" class="preview-chat">
               <img class="me-3" :src="`img/avatar${contact.avatar}.jpg`" :alt="contact.name" />
               <h4>{{contact.name}}</h4>
@@ -97,11 +97,17 @@
             <ul class="list-unstyled m-0">
               <!-- Received -->
               <li class="received">
-                <span class="message">Ciao</span>
+                <span class="message">
+                  <p class="text-message">Ciao</p>
+                  <div class="time">10/10/2020 12:40</div>
+                </span>
               </li>
               <!-- Send -->
               <li class="sent">
-                <span class="message">Ciao me</span>
+                <span class="message">
+                  <p class="text-message">Ciao me</p>
+                  <div class="time">10/10/2020 12:40</div>
+                </span>
               </li>
             </ul>
           </section>

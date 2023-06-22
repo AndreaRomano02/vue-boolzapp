@@ -168,7 +168,6 @@ main {
 
 .chat-content .message {
   min-width: 50px;
-  height: 60px;
   border-radius: 10px;
   display: inline-block;
   padding: 1rem;
@@ -176,6 +175,17 @@ main {
 
 .chat-content li {
   margin-bottom: 1rem;
+}
+
+.message .text-message {
+  margin: 0;
+}
+
+.message .time {
+  font-size: 12px;
+  text-align: end;
+  color: lightgray;
+  margin-top: 5px;
 }
 
 /*? Received message */
