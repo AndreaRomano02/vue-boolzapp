@@ -176,6 +176,8 @@ main {
   border-radius: 10px;
   display: inline-block;
   padding: 1rem;
+  padding-right: 40px;
+  position: relative;
 }
 
 .chat-content li {
@@ -206,6 +208,38 @@ main {
 
 .sent > .message {
   background-color: var(--send-chat-color);
+}
+
+/*? Banner */
+.banner a {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.banner .actions {
+  box-shadow: 3px 3px 5px gray;
+}
+
+.sent .banner .actions {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: -50px;
+}
+
+.received .banner .actions {
+  position: absolute;
+  z-index: 1;
+  right: -180px;
+  top: 45px;
+}
+
+.banner button {
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 10px 40px;
 }
 
 /** Text Area Message */

@@ -7,11 +7,13 @@ const myApp = createApp({
   name: 'Boolzap',
   data() {
     return {
+      clicked: false,
       //* Text Filter
       filterText: '',
 
       //* Current ID
       currentId: 1,
+      currentMessageId: 0,
 
       //* Message Text
       textMessage: '',
@@ -257,9 +259,14 @@ const myApp = createApp({
       this.currentId = id;
     },
 
+    setCurrentMessageId(id) {
+      this.currentMessageId = id;
+    },
+
     //* Send a new message
     sendMessage() {
       this.currentMessages.push({
+        id: new Date().getTime(),
         status: 'sent',
         message: this.textMessage,
         date: '10/10/2020 13:20:50',
@@ -273,9 +280,17 @@ const myApp = createApp({
     //* Automatic answer
     automaticAnswer() {
       this.currentMessages.push({
+        id: new Date().getTime(),
         status: 'received',
         message: 'Ok',
         date: '10/10/2020 13:20:50',
+      });
+    },
+
+    deleteMessage() {
+      this.currentContact.messages = this.currentMessages.filter((message) => {
+        console.log(this.currentMessageId, message.id);
+        return message.id !== this.currentMessageId;
       });
     },
   },

@@ -101,10 +101,19 @@
           <!-- Messages -->
           <section class="chat-content p-4">
             <ul class="list-unstyled m-0">
-              <li v-for="{message, date,status} in currentMessages" :class="status">
+              <li v-for="{message, date, status, id} in currentMessages" :class="status">
                 <span class="message">
                   <p class="text-message">{{message}}</p>
                   <div class="time">{{date}}</div>
+                  <div class="banner">
+                    <a href="#" class="banner-arrow" @click="setCurrentMessageId(id)">
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </a>
+                    <div class="actions" v-show="(id === currentMessageId)">
+                      <button>Info Utili</button>
+                      <button @click="deleteMessage()">Elimina messaggio</button>
+                    </div>
+                  </div>
                 </span>
               </li>
             </ul>
