@@ -308,6 +308,20 @@ const myApp = createApp({
         if (message.id === this.currentMessageId) this.toggle = !this.toggle;
       }
     },
+    //* Riconoscimento vocale del testo
+    startRecognition: function () {
+      const recognition = new webkitSpeechRecognition();
+      const self = this;
+
+      recognition.lang = 'it-IT';
+
+      recognition.onresult = function (event) {
+        const result = event.results[0][0].transcript;
+        self.textMessage = result;
+      };
+
+      recognition.start();
+    },
   },
 });
 
