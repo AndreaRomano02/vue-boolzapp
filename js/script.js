@@ -242,9 +242,10 @@ const myApp = createApp({
 
     //* Filtered Contacts
     filterContacts() {
-      return this.contacts.filter(({ name }) => name.toLowerCase().includes(this.filterText));
+      return this.contacts.filter(({ name }) => name.toLowerCase().includes(this.filterText.toLowerCase()));
     },
   },
+
   methods: {
     //* Render al picture of contacts
     renderPicture({ avatar }) {
@@ -255,7 +256,6 @@ const myApp = createApp({
     setCurrentId({ id }) {
       this.currentId = id;
     },
-
     setCurrentMessageId(id) {
       this.currentMessageId = id;
     },
