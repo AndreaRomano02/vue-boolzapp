@@ -45,11 +45,11 @@
           </header>
 
           <!-- NOTIFICATION -->
-          <div class="notification d-flex align-items-center">
+          <div class="notification" v-show="deleteNotification">
             <a href="#" id="bell-notification"><i class="fa-solid fa-bell-slash"></i></a>
             <div class="ms-3 text-notification">
               <h5 class="m-0">Ricevi notifiche dei nuovi messaggi</h5>
-              <a href="#">Attiva notifiche desktop</a>
+              <a href="#" @click="deleteNotification = false">Attiva notifiche desktop</a>
             </div>
           </div>
 

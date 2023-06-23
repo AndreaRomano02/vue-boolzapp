@@ -13,6 +13,9 @@ const myApp = createApp({
       //* Show Toggle Search Bar
       showBar: false,
 
+      //* Delete notification
+      deleteNotification: true,
+
       //* Text Filter
       filterText: '',
 
@@ -308,6 +311,7 @@ const myApp = createApp({
         if (message.id === this.currentMessageId) this.toggle = !this.toggle;
       }
     },
+
     //* Riconoscimento vocale del testo
     startRecognition: function () {
       const recognition = new webkitSpeechRecognition();
