@@ -7,7 +7,9 @@ const myApp = createApp({
   name: 'Boolzap',
   data() {
     return {
-      clicked: false,
+      //* Toggle for banner
+      toggle: false,
+
       //* Text Filter
       filterText: '',
 
@@ -285,9 +287,16 @@ const myApp = createApp({
     //* Delete a message
     deleteMessage() {
       this.currentContact.messages = this.currentMessages.filter((message) => {
-        console.log(this.currentMessageId, message.id);
+        this.toggle = false;
         return message.id !== this.currentMessageId;
       });
+    },
+
+    //* Toggled the banner
+    toggleBanner() {
+      for (message of this.currentMessages) {
+        if (message.id === this.currentMessageId) this.toggle = !this.toggle;
+      }
     },
   },
 });

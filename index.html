@@ -110,12 +110,12 @@
                   <p class="text-message">{{message}}</p>
                   <div class="time">{{date}}</div>
                   <div class="banner">
-                    <a href="#" class="banner-arrow" @click="setCurrentMessageId(id)">
+                    <a href="#" class="banner-arrow" @click="setCurrentMessageId(id),toggleBanner(id)">
                       <i class="fa-solid fa-chevron-down"></i>
                     </a>
-                    <div class="actions" v-show="(id === currentMessageId)">
+                    <div class="actions" v-show="(toggle && id === currentMessageId)">
                       <button>Info Utili</button>
-                      <button @click="deleteMessage()">Elimina messaggio</button>
+                      <button @click="deleteMessage(id)">Elimina messaggio</button>
                     </div>
                   </div>
                 </span>
