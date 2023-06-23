@@ -172,6 +172,23 @@ main {
   flex-direction: column;
 }
 
+/** Header Main */
+.chat-header {
+  position: relative;
+}
+
+.user-icon .search-bar {
+  position: absolute;
+  width: 35%;
+  bottom: -35px;
+  right: 0%;
+  z-index: 1;
+}
+
+.user-icon .search-bar input {
+  padding: 1rem;
+}
+
 /** Chat Content */
 .chat-content {
   flex-grow: 1;
@@ -223,7 +240,7 @@ main {
 }
 
 /*? Banner */
-.banner a {
+.banner .banner-arrow {
   position: absolute;
   right: 10px;
   top: 15px;

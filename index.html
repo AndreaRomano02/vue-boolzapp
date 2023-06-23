@@ -92,11 +92,28 @@
               <img class="user-img" :src="renderContactPicture" :alt="renderContactName" />
               <div class="user-info">
                 <h5 class="user-name m-0">{{renderContactName}}</h5>
-                <div class="last-access">Ultimo accesso oggi alle</div>
+                <div class="last-access">
+                  Ultimo accesso il {{currentContact.messages[currentContact.messages.length - 1].date}}
+                </div>
               </div>
             </div>
             <div class="user-icon">
-              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+              <a href="#">
+                <i class="fa-solid fa-magnifying-glass" @click="showBar = ! showBar"></i>
+
+                <!-- SEARCH BAR CHAT -->
+                <div v-show="showBar" class="search-bar">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="filter-input-glass"
+                      placeholder="Cerca..."
+                      v-model="filterMessage"
+                    />
+                  </div>
+                </div>
+              </a>
               <a href="#"><i class="fa-solid fa-paperclip"></i></a>
               <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
             </div>
@@ -105,7 +122,7 @@
           <!-- Messages -->
           <section class="chat-content p-4">
             <ul class="list-unstyled m-0">
-              <li v-for="{message, date, status, id} in currentMessages" :class="status">
+              <li v-for="{message, date, status, id} in filterMessages" :class="status">
                 <span class="message">
                   <p class="text-message">{{message}}</p>
                   <div class="time">{{date}}</div>

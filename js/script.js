@@ -10,6 +10,9 @@ const myApp = createApp({
       //* Toggle for banner
       toggle: false,
 
+      //* Show Toggle Search Bar
+      showBar: false,
+
       //* Text Filter
       filterText: '',
 
@@ -19,6 +22,7 @@ const myApp = createApp({
 
       //* Message Text
       textMessage: '',
+      filterMessage: '',
 
       //! DATA
       user: {
@@ -243,6 +247,12 @@ const myApp = createApp({
     //* Filtered Contacts
     filterContacts() {
       return this.contacts.filter(({ name }) => name.toLowerCase().includes(this.filterText.toLowerCase()));
+    },
+
+    filterMessages() {
+      return this.currentMessages.filter(({ message }) =>
+        message.toLowerCase().includes(this.filterMessage.toLowerCase())
+      );
     },
   },
 
