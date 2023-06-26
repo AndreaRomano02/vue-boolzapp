@@ -279,7 +279,7 @@ const myApp = createApp({
         id: new Date().getTime(),
         status: 'sent',
         message: this.textMessage,
-        date: '10/10/2020 13:20:50',
+        date: new Date().toLocaleString(),
       });
       this.textMessage = '';
 
@@ -293,7 +293,7 @@ const myApp = createApp({
         id: new Date().getTime(),
         status: 'received',
         message: 'Ok',
-        date: '10/10/2020 13:20:50',
+        date: new Date().toLocaleString(),
       });
     },
 
